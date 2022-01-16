@@ -16,3 +16,24 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.value {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 24px;
+  color: red;
+}
+
+.label {
+  padding: 10px;
+  font-size: 24px;
+  color: navy;
+}
