@@ -29,7 +29,6 @@ const options = {
         useIcon: false,
       });
       Notiflix.Notify.failure('Please choose a date in the future');
-      //window.alert('Please choose a date in the future');
       return;
     }
     refs.startBtn.removeAttribute('disabled');
@@ -52,6 +51,9 @@ const timer = {
       const currentTime = Date.now();
       const ms = fp.selectedDates[0] - currentTime;
       const timer = convertMs(ms);
+      if (ms <= 0) {
+        clearInterval(intervalId);
+      }
       updateTimer(timer);
     }, 1000);
   },
